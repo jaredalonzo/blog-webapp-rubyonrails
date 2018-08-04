@@ -1,4 +1,9 @@
 class ArticlesController < ApplicationController
+  # useful: convention for order of methods in all controller classes - index, show, new, edit, create, update, destroy
+  def index
+    @articles = Article.all
+  end
+
   def show
     @article = Article.find(params[:id])
   end
